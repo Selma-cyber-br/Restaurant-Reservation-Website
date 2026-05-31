@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Ember &amp; Oak</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <a href="../index.html" class="nav-logo">Ember <span>&amp;</span> Oak</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="menu.html" onclick="closeMenu()">Menu</a></li>
+      <li><a href="experience.html" onclick="closeMenu()">Experience</a></li>
+      <li><a href="contact.html" onclick="closeMenu()">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="nav-reserve">Reserve a Table</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+<div class="page-hero">
+  <div class="page-hero-label">Our Offerings</div>
+  <h1 class="page-hero-title">The <em>Seasonal</em><br>Menu</h1>
+  <p class="page-hero-sub">Every dish is crafted from ingredients sourced daily — cooked over live oak and cherry wood in our open-hearth kitchen.</p>
+</div>
+
+<section class="menu-section">
+  <div class="menu-wrapper">
+    <div class="menu-tabs">
+      <button class="menu-tab active" onclick="showTab(event,'starters')">Starters</button>
+      <button class="menu-tab" onclick="showTab(event,'mains')">Mains</button>
+      <button class="menu-tab" onclick="showTab(event,'desserts')">Desserts</button>
+      <button class="menu-tab" onclick="showTab(event,'drinks')">Drinks</button>
+    </div>
+
+    <div id="starters" class="menu-panel active"><div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Smoked Beet Tartare</div><div class="menu-item-desc">Cold-smoked golden beets, horseradish cr&egrave;me, pickled walnut, micro sorrel</div><span class="menu-item-tag">Chef&rsquo;s Choice</span></div><div class="menu-item-price">$24</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Seared Scallop</div><div class="menu-item-desc">Diver scallop, celeriac pur&eacute;e, crispy capers, brown butter vinaigrette</div></div><div class="menu-item-price">$28</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Heritage Charcuterie</div><div class="menu-item-desc">House-cured meats, artisan cheeses, seasonal preserves, grilled sourdough</div></div><div class="menu-item-price">$32</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Roasted Bone Marrow</div><div class="menu-item-desc">Grass-fed marrow, chimichurri, shaved radish, toasted focaccia</div><span class="menu-item-tag">Signature</span></div><div class="menu-item-price">$22</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Truffle Arancini</div><div class="menu-item-desc">Aged parmesan risotto, black truffle, arrabiata dipping sauce</div></div><div class="menu-item-price">$19</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Oysters Rockefeller</div><div class="menu-item-desc">Half dozen, creamed spinach, crispy breadcrumb, lemon mignonette</div></div><div class="menu-item-price">$26</div></div>
+    </div></div>
+
+    <div id="mains" class="menu-panel"><div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Oak-Fired Wagyu Sirloin</div><div class="menu-item-desc">12oz A5 Wagyu, roasted garlic jus, bone marrow butter, seasonal vegetables</div><span class="menu-item-tag">Chef&rsquo;s Choice</span></div><div class="menu-item-price">$120</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Wild Halibut</div><div class="menu-item-desc">Pacific halibut, saffron beurre blanc, fennel confit, grilled asparagus</div></div><div class="menu-item-price">$68</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Duck Confit</div><div class="menu-item-desc">Heritage duck leg, cherry gastrique, lentil cassoulet, crispy kale</div><span class="menu-item-tag">Signature</span></div><div class="menu-item-price">$58</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Forest Mushroom Risotto</div><div class="menu-item-desc">Chanterelle, porcini, shiitake, aged pecorino, truffle oil, chive</div></div><div class="menu-item-price">$42</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Lamb Rack</div><div class="menu-item-desc">Colorado lamb, pistachio crust, roasted carrots, rosemary jus</div></div><div class="menu-item-price">$78</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Roast Chicken</div><div class="menu-item-desc">Free-range bird, herb butter, potato gratin, pan drippings</div></div><div class="menu-item-price">$48</div></div>
+    </div></div>
+
+    <div id="desserts" class="menu-panel"><div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Valrhona Chocolate Fondant</div><div class="menu-item-desc">Dark chocolate, sea salt caramel core, Tahitian vanilla ice cream</div><span class="menu-item-tag">Chef&rsquo;s Choice</span></div><div class="menu-item-price">$18</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Cr&egrave;me Br&ucirc;l&eacute;e</div><div class="menu-item-desc">Classic vanilla bean custard, caramelized sugar, seasonal berry compote</div></div><div class="menu-item-price">$14</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Tarte Tatin</div><div class="menu-item-desc">Caramelized heirloom apple, puff pastry, cr&egrave;me fra&icirc;che, calvados</div><span class="menu-item-tag">Seasonal</span></div><div class="menu-item-price">$16</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Cheese Selection</div><div class="menu-item-desc">Curated artisan cheeses, honeycomb, fig jam, walnut bread</div></div><div class="menu-item-price">$24</div></div>
+    </div></div>
+
+    <div id="drinks" class="menu-panel"><div class="menu-grid">
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Ember Old Fashioned</div><div class="menu-item-desc">Charcoal-washed bourbon, smoked maple, orange bitters, expressed peel</div><span class="menu-item-tag">Signature</span></div><div class="menu-item-price">$22</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Garden Spritz</div><div class="menu-item-desc">Cucumber, elderflower, prosecco, fresh herbs, tonic</div></div><div class="menu-item-price">$16</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Wine Pairing</div><div class="menu-item-desc">Five-course sommelier-selected pairings, 2oz pours per course</div></div><div class="menu-item-price">$95</div></div>
+      <div class="menu-item"><div class="menu-item-left"><div class="menu-item-name">Non-Alcoholic Journey</div><div class="menu-item-desc">Craft botanical, fermented, and pressed juice pairings per course</div></div><div class="menu-item-price">$55</div></div>
+    </div></div>
+  </div>
+</section>
+
+  <footer>
+    <div class="footer-logo">Ember <span>&amp;</span> Oak</div>
+    <p class="footer-copy">&copy; 2026 Ember &amp; Oak. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Press</a></li>
+      <li><a href="#">Gift Cards</a></li>
+      <li><a href="#">Privacy</a></li>
+    </ul>
+  </footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
